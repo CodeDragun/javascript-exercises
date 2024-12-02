@@ -1,4 +1,9 @@
-const getTheTitles = function() {
+const getTheTitles = function(arr) {
+    return arr.reduce(((acc, item) => {
+        if(!acc[item.title])
+            acc.push(item.title)
+        return acc
+    }), [])
 
 };
 
